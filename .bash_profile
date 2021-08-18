@@ -1,6 +1,13 @@
-
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
-alias ls='ls -GFh'
+#  .bash_profile is executed at login
 
+echo "BEGIN .bash_profile"
+
+#  Execute .bashrc here as well.  
+source ~/.bashrc
+
+echo "END .bash_profile"
+
+# added by Anaconda2 4.4.0 installer
+export PATH="/Users/brice/anaconda/bin:$PATH"
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion

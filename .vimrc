@@ -1,31 +1,19 @@
+set runtimepath+=~/.vim_runtime
 set number
-" set UTF-8 encoding
-set enc=utf-8
-set fenc=utf-8
-set termencoding=utf-8
-" disable vi compatibility (emulation of old bugs)
-set nocompatible
-" use indentation of previous line
-set autoindent
-" use intelligent indentation for C
-set smartindent
-" configure tabwidth and insert spaces instead of tabs
-set tabstop=4        " tab width is 4 spaces
-set shiftwidth=4     " indent also with 4 spaces
-set expandtab        " expand tabs to spaces
-" wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
-set textwidth=120
-" turn syntax highlighting on
-set t_Co=256
-syntax on
-" colorscheme wombat256
-" turn line numbers on
-set number
-" highlight matching braces
-set showmatch
-" intelligent comments
-set comments=sl:/*,mb:\ *,elx:\ */
 
+source ~/.vim_runtime/vimrcs/basic.vim
+source ~/.vim_runtime/vimrcs/filetypes.vim
+source ~/.vim_runtime/vimrcs/plugins_config.vim
+source ~/.vim_runtime/vimrcs/extended.vim
 
+try
+source ~/.vim_runtime/my_configs.vim
+catch
+endtry
 
-color desert
+set cin aw ai is ts=4 sw=4 tm=50 nu noeb bg=dark ru cul
+sy on | im jk <esc> | im kj <esc> | no ; :
+" Select region and then type :Hash to hash your selection.
+" Useful for verifying that there aren’t mistypes.
+ca Hash w !cpp -dD -P -fpreprocessed \| tr -d ’[:space:]’ \
+\| md5sum \| cut -c-6
