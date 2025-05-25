@@ -7,9 +7,9 @@ So I don't have to set this up every time
 
 ## Install
 
+Mac
 ```
-Mac:
-    brew install yadm
-    yadm clone https://github.com/bricehalder/dotfiles.git
+brew install yadm
+yadm clone https://github.com/bricehalder/dotfiles.git
 ```
 
