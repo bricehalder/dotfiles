@@ -10,6 +10,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias py3="python3"
+
 alias gs="git status"
 alias gb="git branch"
 alias gch="git checkout"
@@ -18,3 +19,12 @@ alias gd="git diff"
 alias gc="git commit"
 alias ga="git add"
 alias glp="git log --pretty=format:"%h %s" --graph"
+
+alias ys="yadm status"
+alias yb="yadm branch"
+alias ych="yadm checkout"
+alias yl="yadm log"
+alias yd="yadm diff"
+alias yc="yadm commit"
+alias ya="yadm add"
+alias ylp="yadm log --pretty=format:"%h %s" --graph"
